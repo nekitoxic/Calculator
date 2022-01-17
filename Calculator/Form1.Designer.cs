@@ -126,6 +126,7 @@
             this.buttonBack.TabIndex = 14;
             this.buttonBack.Text = "<";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.back_click);
             // 
             // buttonMultiple
             // 
@@ -233,7 +234,7 @@
             this.buttonClear.TabIndex = 22;
             this.buttonClear.Text = "CE";
             this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.operation_click);
+            this.buttonClear.Click += new System.EventHandler(this.operation_ce_click);
             // 
             // buttonSquare
             // 

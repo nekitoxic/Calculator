@@ -49,7 +49,7 @@ namespace Calculator
 
         public Int16 GetPriority(Operation operation)
         {
-            switch(operation)
+            switch (operation)
             {
                 case Operation.Multiple: return 0;
                 case Operation.Divide: return 1;
@@ -131,7 +131,7 @@ namespace Calculator
         {
             Double calc = SimpleCalculate(Invoke(ref exp));
 
-            switch(operation)
+            switch (operation)
             {
                 case Operation.Drop: return 0;
                 case Operation.Factorial: return GetFactorial(calc);
@@ -150,12 +150,12 @@ namespace Calculator
 
             return num * GetFactorial(num - 1);
         }
-        
+
         private static Double SimpleCalculate(List<object> expression)
         {
             if (expression.Count() < 3)
             {
-                return (Double) expression.First();
+                return (Double)expression.First();
             }
 
             List<Expression> exps = new List<Expression>();
@@ -190,7 +190,7 @@ namespace Calculator
         {
             List<object> res = new List<object>();
 
-            foreach(string el in exp)
+            foreach (string el in exp)
             {
                 Operation operation = GetOperation(el);
 
@@ -204,7 +204,7 @@ namespace Calculator
                 }
             }
 
-            if(isEnum(res.Last()))
+            if (isEnum(res.Last()))
             {
                 res.RemoveAt(res.Count - 1);
             }
